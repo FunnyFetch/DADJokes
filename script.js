@@ -12,12 +12,34 @@ const random = async () => {
   const res = await fetch(apiURL)
   const joke = await res.json();
   console.log('joke:', joke);
+  
   const p = document.createElement("p");
   const p2 = document.createElement("p2");
-  p.textContent = joke.setup
-  p2.textContent = joke.punchline
-  document.body.appendChild(p)
-  document.body.appendChild(p2)
+  p.textContent = joke.setup;
+  p2.textContent = joke.punchline;
+  
+  const jokeContainer = document.querySelector('#generator');
+  jokeContainer.appendChild(p);
+  jokeContainer.appendChild(p2)
+ 
+  const button = document.createElement("button");
+  button.textContent = "CLICK ME!";
+  button.id = "button";
+  jokeContainer.appendChild(button);
+  
+  const getRandomJoke = async () => {
+      const res = await fetch(apiURL, {
+          headers: {
+              'Accept': 'application/json'
+            }
+        });
+        const joke = await res.json();
+        console.log(joke);
+        p.innerHTML = joke.setup
+        p2.innerHTML = joke.punchline;
+
+    }
+    button.addEventListener("click", getRandomJoke);
 };
 
 tenJokes();
