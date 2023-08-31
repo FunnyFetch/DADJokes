@@ -18,12 +18,8 @@ const tenJokes = async () => {
 
     
     
-    // Assuming you have an <ul> element in your HTML
-    const ul = document.querySelector('ul');
-    
-    
-    
-      
+  //   // Assuming you have an <ul> element in your HTML
+  //   const ul = document.querySelector('ul');
     //function to add item
     //that will be onClick 
     //onclick="addJoke()"
@@ -80,6 +76,7 @@ const random = async () => {
     }
     button.addEventListener("click", getRandomJoke);
 };
+
 
 tenJokes();
 
