@@ -1,22 +1,40 @@
 const apiURL10 = 'https://official-joke-api.appspot.com/jokes/ten';
 
+
+function addJoke(jokeItem){
+  const jokeHtml = jokeItem.outerHTML;
+  let favJokeList = JSON.parse(localStorage.getItem('favJoke')|| "[]");
+  favJokeList.push(jokeHtml);
+  localStorage.setItem('favJoke', JSON.stringify(favJokeList));
+  
+}
 const tenJokes = async () => {
   try {
     const res = await fetch(apiURL10);
     const jokesData = await res.json();
     console.log('joke:', jokesData);
+    //function to add 2 
+    
+
+    
     
   //   // Assuming you have an <ul> element in your HTML
   //   const ul = document.querySelector('ul');
-    
-  //   jokesData.forEach(joke => {
-  //     const li = document.createElement('li');
-  //     li.textContent = joke.setup;
-  //     ul.appendChild(li);
-  //     const punch = document.createElement('p')
-  //     punch.textContent = joke.punchline
-  //     li.appendChild(punch)
-  //   });
+    //function to add item
+    //that will be onClick 
+    //onclick="addJoke()"
+
+    jokesData.forEach(joke => {
+      const li = document.createElement('li');
+      li.textContent = joke.setup;
+      ul.appendChild(li);
+      const punch = document.createElement('p')
+      punch.textContent = joke.punchline
+      li.appendChild(punch)
+      li.onclick = function (){
+        addJoke(this)
+      }
+    });
   } catch (error) {
     console.error(error);
   }
@@ -63,3 +81,8 @@ const random = async () => {
 tenJokes();
 
 random();
+
+const dataToSend = 'Hey'
+// console.log(localStorage)
+localStorage.setItem('myData', dataToSend)
+console.log(dataToSend)
