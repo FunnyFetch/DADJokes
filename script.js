@@ -6,17 +6,17 @@ const tenJokes = async () => {
     const jokesData = await res.json();
     console.log('joke:', jokesData);
     
-    // Assuming you have an <ul> element in your HTML
-    const ul = document.querySelector('ul');
+  //   // Assuming you have an <ul> element in your HTML
+  //   const ul = document.querySelector('ul');
     
-    jokesData.forEach(joke => {
-      const li = document.createElement('li');
-      li.textContent = joke.setup;
-      ul.appendChild(li);
-      const punch = document.createElement('p')
-      punch.textContent = joke.punchline
-      li.appendChild(punch)
-    });
+  //   jokesData.forEach(joke => {
+  //     const li = document.createElement('li');
+  //     li.textContent = joke.setup;
+  //     ul.appendChild(li);
+  //     const punch = document.createElement('p')
+  //     punch.textContent = joke.punchline
+  //     li.appendChild(punch)
+  //   });
   } catch (error) {
     console.error(error);
   }
@@ -59,11 +59,6 @@ const random = async () => {
     button.addEventListener("click", getRandomJoke);
 };
 
-const card = document.querySelector('#card');
-
-const cardFlip = () => {
-
-}
 
 tenJokes();
 
