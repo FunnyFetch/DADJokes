@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: black;
+}
+
+body {
+    font-family: 'Michroma';
+    color: white;
+
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+ h2 {
+    font-size: 22px;
+ }
+
+.navBar {
+    display: flex;
+    flex-direction: row;
+   justify-content: space-evenly;
+
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: white;
+}
+
+.hero {
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+}
