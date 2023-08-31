@@ -31,11 +31,11 @@ const random = async () => {
   console.log('joke:', joke);
   
   const p = document.createElement("p");
-  const p2 = document.createElement("p2");
+  const p2 = document.createElement("p");
   p.textContent = joke.setup;
   p2.textContent = joke.punchline;
   
-  const jokeContainer = document.querySelector('#generator');
+  const jokeContainer = document.querySelector('#random-card');
   jokeContainer.appendChild(p);
   jokeContainer.appendChild(p2)
  
