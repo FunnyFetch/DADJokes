@@ -142,18 +142,22 @@ h1 {
 
 .flip-card-back {
     background-color: white;
-    color: black;
+    /* color: white; */
     transform: rotateY(180deg);
 }
 
 .setup {
+    margin-top: 25%;
+    background-color: black;
     font-size: 22px;
     color: white;
 }
 
 .punchline {
+    margin-top: 25%;
+    background-color: white;
     font-size: 22px;
-    color: black
+    color: black;
 }
 
  #generator {
