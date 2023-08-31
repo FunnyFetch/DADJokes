@@ -59,6 +59,12 @@ const random = async () => {
     button.addEventListener("click", getRandomJoke);
 };
 
+const card = document.querySelector('#card');
+
+const cardFlip = () => {
+
+}
+
 tenJokes();
 
 random();
