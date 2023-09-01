@@ -127,6 +127,10 @@ h1 {
     transform: rotateY(180deg);
 }
 
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
@@ -147,7 +151,7 @@ h1 {
 }
 
 .setup {
-    margin-top: 25%;
+    margin-top: 15%;
     background-color: black;
     font-size: 22px;
     color: white;
