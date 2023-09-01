@@ -35,7 +35,7 @@ const tenJokes = async () => {
       
       flipCard.addEventListener('click', () => {
         flipCard.classList.toggle('flipped');
-      
+     
       li.onclick = function (){
         addJoke(this)
       }
