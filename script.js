@@ -15,6 +15,7 @@ const tenJokes = async () => {
     console.log('joke:', jokesData);
     //function to add 2 
     
+    const flipCards = document.querySelectorAll('.flip-card');
 
     
     
@@ -24,17 +25,22 @@ const tenJokes = async () => {
     //that will be onClick 
     //onclick="addJoke()"
 
-    jokesData.forEach(joke => {
-      const li = document.createElement('li');
-      li.textContent = joke.setup;
-      ul.appendChild(li);
-      const punch = document.createElement('p')
-      punch.textContent = joke.punchline
-      li.appendChild(punch)
+    jokesData.forEach((joke, index) => {
+      const flipCard = document.getElementById(`joke${index + 1}`);
+      const frontDiv = flipCard.querySelector('.flip-card-front');
+      const backDiv = flipCard.querySelector('.flip-card-back')
+      
+      frontDiv.querySelector('.setup').textContent = joke.setup;
+      backDiv.querySelector('.punchline').textContent = joke.punchline;
+      
+      flipCard.addEventListener('click', () => {
+        flipCard.classList.toggle('flipped');
+      
       li.onclick = function (){
         addJoke(this)
       }
-    });
+    })
+  });
   } catch (error) {
     console.error(error);
   }
