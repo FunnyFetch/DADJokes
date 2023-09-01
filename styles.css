@@ -27,13 +27,14 @@ h1 {
 .navBar {
     display: flex;
     flex-direction: row;
-   justify-content: space-evenly;
-
+    justify-content:space-evenly;
 }
+
 
 .nav-item a {
     text-decoration: none;
     color: white;
+
 }
 
 .hero {

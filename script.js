@@ -81,6 +81,5 @@ tenJokes();
 random();
 
 const dataToSend = 'Hey'
-// console.log(localStorage)
 localStorage.setItem('myData', dataToSend)
 console.log(dataToSend)
