@@ -1,36 +1,43 @@
 const apiURL10 = 'https://official-joke-api.appspot.com/jokes/ten';
 
 
-function addJoke(jokeItem){
-  const jokeHtml = jokeItem.outerHTML;
-  let favJokeList = JSON.parse(localStorage.getItem('favJoke')|| "[]");
-  favJokeList.push(jokeHtml);
-  localStorage.setItem('favJoke', JSON.stringify(favJokeList));
-  
+
+function addJoke(joke) {
+  let favJokeList = JSON.parse(sessionStorage.getItem('favJoke') || "[]");
+  favJokeList.push(joke);
+  sessionStorage.setItem('favJoke', JSON.stringify(favJokeList));
 }
+
 const tenJokes = async () => {
   try {
     const res = await fetch(apiURL10);
     const jokesData = await res.json();
     console.log('joke:', jokesData);
+   
     
     const flipCards = document.querySelectorAll('.flip-card');
-    jokesData.forEach((joke, index) => {
-      const flipCard = document.getElementById(`joke${index + 1}`);
-      const frontDiv = flipCard.querySelector('.flip-card-front');
-      const backDiv = flipCard.querySelector('.flip-card-back')
-      
-      frontDiv.querySelector('.setup').textContent = joke.setup;
-      backDiv.querySelector('.punchline').textContent = joke.punchline;
-      
-      flipCard.addEventListener('click', () => {
-        flipCard.classList.toggle('flipped');
-     
-      li.onclick = function (){
-        addJoke(this)
-      }
-    })
+
+    
+    
+  
+
+
+  jokesData.forEach((joke, index) => {
+    const flipCard = document.getElementById(`joke${index + 1}`);
+    const frontDiv = flipCard.querySelector('.flip-card-front');
+    const backDiv = flipCard.querySelector('.flip-card-back');
+    
+    frontDiv.querySelector('.setup').textContent = joke.setup;
+    backDiv.querySelector('.punchline').textContent = joke.punchline;
+  
+  
+    flipCard.dataset.id = index + 1;
+  
+    flipCard.addEventListener('click', () => {
+      addJoke(joke);
+    });
   });
+  
   } catch (error) {
     console.error(error);
   }
@@ -40,7 +47,6 @@ const tenJokes = async () => {
 const apiURL = 'https://official-joke-api.appspot.com/jokes/random';
 
 const random = async () => {
-  try {
   const res = await fetch(apiURL)
   const joke = await res.json();
   console.log('joke:', joke);
@@ -48,7 +54,8 @@ const random = async () => {
   const p = document.createElement("p");
   const p2 = document.createElement("p");
   p.textContent = joke.setup;
-  p2.textContent = joke.punchline;  
+  p2.textContent = joke.punchline;
+  
   const jokeContainer = document.querySelector('#random-card');
   jokeContainer.appendChild(p);
   jokeContainer.appendChild(p2)
@@ -71,15 +78,9 @@ const random = async () => {
 
     }
     button.addEventListener("click", getRandomJoke);
-  } catch (error) {
-    console.error(error);
-  }
 };
 
 
 tenJokes();
-random();
 
-const dataToSend = 'Hey'
-localStorage.setItem('myData', dataToSend)
-console.log(dataToSend)
+random();

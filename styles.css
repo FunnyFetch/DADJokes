@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -27,14 +28,13 @@ h1 {
 .navBar {
     display: flex;
     flex-direction: row;
-    justify-content:space-evenly;
-}
+   justify-content: space-evenly;
 
+}
 
 .nav-item a {
     text-decoration: none;
     color: white;
-
 }
 
 .hero {
@@ -138,9 +138,6 @@ h1 {
     transform: rotateY(180deg);
 }
 
-.flip-card.flipped .flip-card-inner {
-    transform: rotateY(180deg);
-  }
 
 .flip-card-front, .flip-card-back {
     position: absolute;
@@ -157,20 +154,21 @@ h1 {
 
 .flip-card-back {
     background-color: white;
+    /* color: white; */
     transform: rotateY(180deg);
 }
 
 .setup {
     margin-top: 15%;
     background-color: black;
-    font-size: 18px;
+    font-size: 22px;
     color: white;
 }
 
 .punchline {
-    margin-top: 15%;
+    margin-top: 25%;
     background-color: white;
-    font-size: 18px;
+    font-size: 22px;
     color: black;
 }
 
@@ -259,27 +257,18 @@ footer {
         justify-content: center;
     }
 
-    #joke1 {
-        margin-left: 100px;
-    }
-
-    #joke2 {
-     margin-top: 10%;
-     margin-left: 100px;
-    }
-
     #generator {
         margin-top: 15%;
         margin-bottom: 5%;
-        margin-left: -17px;
     }
 
     #generator h2 {
-        margin-top: 5%;
-        margin-bottom: 15%;
-        font-size: 12px;
+        margin-bottom: 20%;
     }
 
+    .random-card {
+        
+    }
 
     footer {
         flex-direction: column;
