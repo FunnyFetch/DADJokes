@@ -51,59 +51,69 @@ h1 {
 
 #joke1 {
     margin-right: 200px;
-    margin-left: 200px
+    margin-left: 200px;
+    box-shadow: 10px 10px;
 }
 
 #joke2 {
     margin-right: 200px;
+    box-shadow: 10px 10px;
 }
 
 #joke3 {
     margin-right: 100px;
     margin-left: 100px;
     margin-top: 100px;
+    box-shadow: 10px 10px;
 }
 
 #joke4 {
     margin-right: 100px;
     margin-left: 100px;
     margin-top: 100px;
+    box-shadow: 10px 10px;
 }
 
 #joke5 {
     margin-right: 100px;
     margin-left: 100px;
     margin-top: 100px;
+    box-shadow: 10px 10px;
 }
 
 #joke6 {
     margin-right: 100px;
     margin-left: 100px;
     margin-top: 100px;
+    box-shadow: 10px 10px;
 }
 
 #joke7 {
     margin-right: 100px;
     margin-left: 100px;
     margin-top: 100px;
+    box-shadow: 10px 10px;
 }
 
 #joke8 {
     margin-right: 100px;
     margin-left: 100px;
     margin-top: 100px;
+    box-shadow: 10px 10px;
 }
 
 #joke9 {
     margin-right: 100px;
     margin-left: 100px;
     margin-top: 100px;
+    box-shadow: 10px 10px;
 }
 
 #joke10 {
     margin-right: 100px;
     margin-left: 100px;
     margin-top: 100px;
+    box-shadow: 10px 10px;
 }
 
 .flip-card {
@@ -217,3 +227,59 @@ footer {
     display: flex;
     justify-content: space-evenly;
 }
+
+@media (max-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+
+    .navBar {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .hero {
+        margin-top: 30%;
+        margin-bottom: 30%;
+    }
+
+    .ten-random {
+        flex-direction: column; 
+        justify-content: center;
+    }
+
+    #generator {
+        margin-top: 15%;
+        margin-bottom: 5%;
+    }
+
+    #generator h2 {
+        margin-bottom: 20%;
+    }
+
+    .random-card {
+        
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #button {
+        margin-top: 4rem;
+    }
+}
+
+
