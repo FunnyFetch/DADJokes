@@ -13,18 +13,8 @@ const tenJokes = async () => {
     const res = await fetch(apiURL10);
     const jokesData = await res.json();
     console.log('joke:', jokesData);
-    //function to add 2 
     
     const flipCards = document.querySelectorAll('.flip-card');
-
-    
-    
-  //   // Assuming you have an <ul> element in your HTML
-  //   const ul = document.querySelector('ul');
-    //function to add item
-    //that will be onClick 
-    //onclick="addJoke()"
-
     jokesData.forEach((joke, index) => {
       const flipCard = document.getElementById(`joke${index + 1}`);
       const frontDiv = flipCard.querySelector('.flip-card-front');
@@ -50,6 +40,7 @@ const tenJokes = async () => {
 const apiURL = 'https://official-joke-api.appspot.com/jokes/random';
 
 const random = async () => {
+  try {
   const res = await fetch(apiURL)
   const joke = await res.json();
   console.log('joke:', joke);
@@ -57,8 +48,7 @@ const random = async () => {
   const p = document.createElement("p");
   const p2 = document.createElement("p");
   p.textContent = joke.setup;
-  p2.textContent = joke.punchline;
-  
+  p2.textContent = joke.punchline;  
   const jokeContainer = document.querySelector('#random-card');
   jokeContainer.appendChild(p);
   jokeContainer.appendChild(p2)
@@ -81,11 +71,13 @@ const random = async () => {
 
     }
     button.addEventListener("click", getRandomJoke);
+  } catch (error) {
+    console.error(error);
+  }
 };
 
 
 tenJokes();
-
 random();
 
 const dataToSend = 'Hey'

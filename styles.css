@@ -156,21 +156,20 @@ h1 {
 
 .flip-card-back {
     background-color: white;
-    /* color: white; */
     transform: rotateY(180deg);
 }
 
 .setup {
     margin-top: 15%;
     background-color: black;
-    font-size: 22px;
+    font-size: 18px;
     color: white;
 }
 
 .punchline {
-    margin-top: 25%;
+    margin-top: 15%;
     background-color: white;
-    font-size: 22px;
+    font-size: 18px;
     color: black;
 }
 
@@ -268,9 +267,10 @@ footer {
         margin-bottom: 20%;
     }
 
-    .random-card {
-        
-    }
+   #joke2 {
+    margin-top: 10%;
+    margin-left: 10px;
+   }
 
     footer {
         flex-direction: column;
@@ -281,5 +281,3 @@ footer {
         margin-top: 4rem;
     }
 }
-
-
