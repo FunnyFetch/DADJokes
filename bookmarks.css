@@ -9,7 +9,6 @@
 body {
     font-family: 'Michroma';
     color: white;
-
 }
 
 li {
@@ -28,7 +27,6 @@ h1 {
     display: flex;
     flex-direction: row;
    justify-content: space-evenly;
-
 }
 
 .nav-item a {
@@ -44,4 +42,36 @@ h1 {
 .faves {
     margin-top: 10%;
     margin-bottom: 20%;
+}
+
+@media (max-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+
+    .navBar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        margin-top: 30%;
+        margin-bottom: 30%;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+    }
 }
