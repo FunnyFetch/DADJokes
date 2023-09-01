@@ -258,19 +258,25 @@ footer {
         justify-content: center;
     }
 
+    #joke1 {
+        margin-left: 100px;
+    }
+
+    #joke2 {
+     margin-top: 10%;
+     margin-left: 100px;
+    }
+
     #generator {
         margin-top: 15%;
         margin-bottom: 5%;
+        margin-left: -17px;
     }
 
     #generator h2 {
         margin-bottom: 20%;
     }
 
-   #joke2 {
-    margin-top: 10%;
-    margin-left: 10px;
-   }
 
     footer {
         flex-direction: column;
